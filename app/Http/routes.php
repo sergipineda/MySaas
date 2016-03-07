@@ -26,13 +26,10 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    Route::get('auth/{provider}','Auth\AuthController@redirectToAuthenticationServiceProvider');
-    Route::get('auth/{provider}/callback','Auth\AuthController@handleAuthenticationServiceProviderCallback');
-
-
-
-    });
+Route::group(['middleware' => 'web'], function () {
+    Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
+    Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
+});
 
 Route::get('csstransitions', function(){
     return view('tinkering.csstransitions');

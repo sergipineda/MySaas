@@ -28,38 +28,13 @@ class AuthController extends Controller
      *
      * @return Response
      */
-    public function redirectToAuthenticationServiceProvider($provider)
-    {
-        return Socialite::driver($provider)->redirect();
-    }
-
-    /**
-     * Obtain the user information from GitHub.
-     *
-     * @return Response
-     */
-    public function handleAuthenticationServiceProviderCallback($provider)
-    {
-
-        try{
-            $user = Socialite::driver($provider)->user();
-
-        }catch(Exception $e){
-            return \Redirect::to('auth/' . $provider);
-        }
-
-        // $user->token;
-    }
-
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-
     /**
      * Where to redirect users after login / registration.
      *
      * @var string
      */
     protected $redirectTo = '/home';
-
     /**
      * Create a new authentication controller instance.
      *
@@ -69,7 +44,6 @@ class AuthController extends Controller
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
-
     /**
      * Get a validator for an incoming registration request.
      *
@@ -84,7 +58,6 @@ class AuthController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
     }
-
     /**
      * Create a new user instance after a valid registration.
      *

@@ -39,5 +39,22 @@ return [
         'client_secret' => env('SOCIALITE_GITHUB_SECRET'),
         'redirect' =>  env('SOCIALITE_GITHUB_URL'),
     ],
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => env('FACEBOOK_CALLBACK_URL'),
+    ],
+    //Create you own OAuth app in Google: https://console.developers.google.com
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => env('GOOGLE_CALLBACK_URL'),
+    ],
+    //Create you own OAuth app in Twitter: https://apps.twitter.com
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => env('TWITTER_CALLBACK_URL'),
+    ],
 
 ];

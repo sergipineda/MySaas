@@ -9,7 +9,13 @@
 namespace App;
 
 
-class OAuthIdentities
+trait OAuthIdentities
 {
-
+    /**
+     * Get OAuth identities
+     */
+    public function oauthIdentities()
+    {
+        return $this->hasMany(OAuthIdentity::class);
+    }
 }
