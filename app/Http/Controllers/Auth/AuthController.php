@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Support\Facades\Redirect;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Socialite;
 
 class AuthController extends Controller
 {
@@ -20,6 +22,34 @@ class AuthController extends Controller
     | a simple trait to add these behaviors. Why don't you explore it?
     |
     */
+
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToAuthenticationServiceProvider($provider)
+    {
+        return Socialite::driver($provider)->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleAuthenticationServiceProviderCallback($provider)
+    {
+
+        try{
+            $user = Socialite::driver($provider)->user();
+
+        }catch(Exception $e){
+            return \Redirect::to('auth/' . $provider);
+        }
+
+        // $user->token;
+    }
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
