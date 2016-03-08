@@ -26,13 +26,15 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => 'web'], function () {
-    Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
-    Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
+Route::group(['middleware' => ['web']], function () {
+    Route::get('auth/{provider}', 'Auth\AuthController@redirectToAuthenticationServiceProvider');
+    Route::get('auth/{provider}/callback', 'Auth\AuthController@handleAuthenticationServiceProviderCallback');
     Route::get('plans', 'PlansController@index');
-    Route::get('subscription_payment', 'SubscriptionController@subscribe');
+    Route::get('register_subscription', function() {
+        return view('auth.register_subscription');
+    });
+    Route::post('registerAndSubscribeToStripe', 'Auth\AuthController@registerAndSubscribeToStripe');
 });
-
 Route::get('csstransitions', function(){
     return view('tinkering.csstransitions');
 });

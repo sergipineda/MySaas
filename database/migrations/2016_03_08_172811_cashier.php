@@ -39,9 +39,8 @@ class Cashier extends Migration
     public function down()
     {
         Schema::table('users', function ($table){
-            $table->dropColumn('stripe_id')->nullable();
-            $table->dropColumn('card_brand')->nullable();
-            $table->dropColumn('card_last_four')->nullable();
+            $table->dropColumn(['stripe_id','card_brand','card_last_four']);
+
 
              });
     }
