@@ -118,7 +118,7 @@ return [
           #llum_providers
 
 
-    'providers' => [
+    'providers' => array(
 
         /*
          * Laravel Framework Service Providers...
@@ -155,11 +155,13 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+
         /*
          * Acacha AdminLTE template provider
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
-    ],
+        Laravel\Cashier\CashierServiceProvider::class,
+    ),
 
     /*
     |--------------------------------------------------------------------------
