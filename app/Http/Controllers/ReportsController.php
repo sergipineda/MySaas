@@ -6,6 +6,12 @@ class ReportsController extends Controller
 {
     public function dailySales()
     {
+    $daily = SalesReportsDaily::all();
+    $daily = $daily->pluck('total');
+
+
+
+
         return view('reports.dailySales');
     }
 }

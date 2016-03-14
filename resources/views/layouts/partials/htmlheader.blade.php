@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="UTF-8">
     <title> AdminLTE 2 with Laravel - @yield('htmlheader_title', 'Your title here') </title>
@@ -15,13 +14,11 @@
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect.
     -->
-    <link href="{{ asset('/css/skins/skin-green.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/css/skins/skin-blue.css') }}" rel="stylesheet" type="text/css" />
     <!-- iCheck -->
-    <link href="{{ asset('/plugins/iCheck/square/green.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/plugins/iCheck/square/blue.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css" />
-
-    @yield('customs_css', '')
+    @yield('custom_css', '')
 
             <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -12,4 +12,5 @@
       Both of these plugins are recommended to enhance the
       user experience. Slimscroll is required when using the
       fixed layout. -->
-@yield('customs_scripts', '')
+
+@yield('custom_scripts', '')
