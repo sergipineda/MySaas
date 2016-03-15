@@ -1,17 +1,18 @@
 <?php
 namespace App\Http\Controllers;
+use App\SaleReportsDaily;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 class ReportsController extends Controller
 {
     public function dailySales()
     {
-    $daily = SalesReportsDaily::all();
-    $daily = $daily->pluck('total');
+        $daily = SaleReportsDaily::all();
 
+        $days = $daily->pluck('day');
+        $totals = $daily->pluck('total');
 
+        return view('reports.dailySales',compact("days","totals"));
 
-
-        return view('reports.dailySales');
     }
 }

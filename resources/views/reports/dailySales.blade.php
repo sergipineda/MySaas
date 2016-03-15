@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('htmlheader_title')
-    Daily sales report
-@endsection
+    Daily Sales Report
+    @endsection
 
 @section('custom_scripts')
-    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -14,10 +14,10 @@
         } );
         var ctx = document.getElementById("barChartDailySales").getContext("2d");
         var data = {
-            labels: ["Day", "Day3", "March", "April", "May", "June", "July"],
+            labels: {!! json_encode($days) !!},
             datasets: [ {
-                data: [950,1589,1589,2500,3400,456,300],
-                label: "My First dataset",
+                data: {!! json_encode($totals) !!},
+                label: "Daily Sales",
                 fillColor: "rgba(220,220,220,0.5)",
                 strokeColor: "rgba(220,220,220,0.8)",
                 highlightFill: "rgba(220,220,220,0.75)",
@@ -29,6 +29,8 @@
     </script>
 @endsection
 
+
+
 @section('custom_css')
     <link href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 @endsection
@@ -39,8 +41,7 @@
             <div class="col-xs-10">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Daily reports Sales</h3>
-
+                        <h3 class="box-title">Daily Sales Report</h3>
                         <div class="box-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
                                 <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
@@ -53,29 +54,26 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body table-responsive no-padding">
-                        <table class="table table-hover" id="dailySales">
+                        <table id="dailySales" class="table table-hover">
                             <thead>
                             <tr>
                                 <th>Day</th>
                                 <th>Total</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td>Day 1</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <td>Day 2</td>
-                                <td>15</td>
-                            </tr>
-                            </tbody>
+                            <thbody>
+                                @foreach($totals as $index => $total)
+                                    <tr>
+                                        <td> {{$days[$index]}}</td>
+                                        <td> {{$total}}</td>
+                                    </tr>
+                                @endforeach
+                            </thbody>
                         </table>
                     </div>
                     <!-- /.box-body -->
                 </div>
             </div>
-
         </div>
         <div class="row">
             <div class="col-xs-10">
