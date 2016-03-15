@@ -1,15 +1,12 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
-
 use App\User;
-use Illuminate\Support\Facades\Redirect;
+use Auth;
+use Illuminate\Http\Request;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-use Socialite;
-
 class AuthController extends Controller
 {
     /*
@@ -22,12 +19,6 @@ class AuthController extends Controller
     | a simple trait to add these behaviors. Why don't you explore it?
     |
     */
-
-    /**
-     * Redirect the user to the GitHub authentication page.
-     *
-     * @return Response
-     */
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
     /**
      * Where to redirect users after login / registration.
@@ -71,5 +62,23 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+    protected function subscribeToStripe($creditCardToken, User $user)
+    {
+        $user->newSubscription('ID03', 'ID03')
+            ->create($creditCardToken);
+    }
+    protected function registerAndSubscribeToStripe(Request $request) {
+        $validator = $this->validator($request->all());
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+        Auth::guard($this->getGuard())->login($this->create($request->all()));
+        $creditCardToken = $request->input('stripeToken');
+        $user = Auth::user();
+        $this->subscribeToStripe($creditCardToken,$user);
+        return redirect($this->redirectPath());
     }
 }

@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sergi
- * Date: 7/03/16
- * Time: 18:27
- */
-
 namespace App\Http\Controllers\Auth;
-
-
 use App\OAuthIdentity;
 use App\Http\Controllers\Controller;
 use Exception;
@@ -25,7 +16,7 @@ class SocialAuthController extends Controller
      *
      * @return Response
      */
-    public function redirectToProvider($provider)
+    public function redirectToAuthenticationServiceProvider($provider)
     {
         return Socialite::driver($provider)->redirect();
     }
@@ -34,14 +25,14 @@ class SocialAuthController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback($provider)
+    public function handleAuthenticationServiceProviderCallback($provider)
     {
         try {
             $user = Socialite::driver($provider)->user();
         } catch (Exception $e) {
             return Redirect::to('auth/' . $provider);
         }
-//        dd($user);
+//       dd($user);
         $authUser = $this->findOrCreateUser($user , $provider);
         Auth::login($authUser, true);
         return Redirect::to('home');
@@ -79,7 +70,7 @@ class SocialAuthController extends Controller
     }
     private function newUser()
     {
-        $user_model = Config::get('acacha-socialite.model');
+        $user_model = Config::get('sergi-socialite.model');
         return new $user_model;
     }
     private function userExistsByProviderUserId($providerUser)
