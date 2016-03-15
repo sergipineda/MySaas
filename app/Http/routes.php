@@ -25,6 +25,9 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::get('csstransitions', function(){
+    return view('tinkering.csstransitions');
+});
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToAuthenticationServiceProvider');
@@ -34,7 +37,4 @@ Route::group(['middleware' => ['web']], function () {
         return view('auth.register_subscription');
     });
     Route::post('registerAndSubscribeToStripe', 'Auth\AuthController@registerAndSubscribeToStripe');
-});
-Route::get('csstransitions', function(){
-    return view('tinkering.csstransitions');
 });
