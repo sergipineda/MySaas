@@ -12,7 +12,7 @@ class SaleReportsDailyTableSeeder extends Seeder
         $subscriptions = \Laravel\Cashier\Subscription::all();
         $totals = array();
         foreach ($subscriptions as $subscription) {
-            $day = $subscription->created_at->format('Y-m-d');
+            $day = $subscription->created_at->format('Y-m-D');
             $quantity = $subscription->quantity;
             if (array_key_exists($day,$totals)) {
                 $totals[$day] = $totals[$day] + $quantity;

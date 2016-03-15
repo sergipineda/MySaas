@@ -12,7 +12,7 @@ class CreateSaleReportsDailiesTable extends Migration
     {
         Schema::create('sale_reports_dailies', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('day');
+            $table->date('day')->unique();
             $table->integer('total');
             $table->timestamps();
         });

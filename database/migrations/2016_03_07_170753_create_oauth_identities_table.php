@@ -38,7 +38,7 @@ class CreateOauthIdentitiesTable extends Migration
             $table->string('access_token');
             $table->string('avatar');
             $table->string('name')->nullable();;
-            $table->string('nickname')->nullable();;
+            $table->string('nickname')->nullable();
             $table->timestamps();
         });
     }

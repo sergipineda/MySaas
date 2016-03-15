@@ -14,9 +14,9 @@ class UpdateUsersTable extends Migration
     {
         Schema::table('users', function ($table) {
             $table->string('password')->nullable()->change();
-            $table->string('email')->nullable()->change();
             $table->string('avatar')->nullable();
             $table->string('nickname')->nullable();
+            $table->string('name')->nullable()->change();
         });
     }
 
