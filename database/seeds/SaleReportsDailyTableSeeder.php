@@ -1,5 +1,7 @@
 <?php
 use Illuminate\Database\Seeder;
+use Laravel\Cashier\Subscription;
+
 class SaleReportsDailyTableSeeder extends Seeder
 {
     /**
@@ -9,7 +11,7 @@ class SaleReportsDailyTableSeeder extends Seeder
      */
     public function run()
     {
-        $subscriptions = \Laravel\Cashier\Subscription::all();
+        $subscriptions = Subscription::all();
         $totals = array();
         foreach ($subscriptions as $subscription) {
             $day = $subscription->created_at->format('Y-m-D');
