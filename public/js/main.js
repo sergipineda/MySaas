@@ -13408,13 +13408,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
     template: '<canvas id="barChartDailySales" style="height: 226px; width: 494px;" width="617" height="282"></canvas>',
+    props: ['id', 'labels', 'values'],
     ready: function ready() {
 
         var ctx = document.getElementById("barChartDailySales").getContext("2d");
         var data = {
-            labels: ["day1", "day2", "day3"],
+            labels: this.labels,
             datasets: [{
-                data: [65, 45, 35, 25],
+                data: this.values,
                 label: "Daily Sales",
                 fillColor: "rgba(220,220,220,0.5)",
                 strokeColor: "rgba(220,220,220,0.8)",
@@ -13441,34 +13442,32 @@ var _Graph2 = _interopRequireDefault(_Graph);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//$(document).ready(function() {
+//    $('#dailySales').dataTable();
+//} );
+//var ctx = document.getElementById("barChartDailySales").getContext("2d");
+//var data = {
+//    labels: ["day1","day2","day3"],
+//datasets: [ {
+//    data: [65,45,35,25],
+//label: "Daily Sales",
+//    fillColor: "rgba(220,220,220,0.5)",
+//    strokeColor: "rgba(220,220,220,0.8)",
+//    highlightFill: "rgba(220,220,220,0.75)",
+//    highlightStroke: "rgba(220,220,220,1)"
+//}
+//]
+//}
+//var myBarChart = new Chart(ctx).Bar(data);
+//
 /**
  * Created by sergi on 29/03/16.
  */
 
-$(document).ready(function () {
-    $('#dailySales').dataTable();
-});
-var ctx = document.getElementById("barChartDailySales").getContext("2d");
-var data = {
-    labels: ["day1", "day2", "day3"],
-    datasets: [{
-        data: [65, 45, 35, 25],
-        label: "Daily Sales",
-        fillColor: "rgba(220,220,220,0.5)",
-        strokeColor: "rgba(220,220,220,0.8)",
-        highlightFill: "rgba(220,220,220,0.75)",
-        highlightStroke: "rgba(220,220,220,1)"
-    }]
-};
-var myBarChart = new Chart(ctx).Bar(data);
-
 new _vue2.default({
-    el: 'body',
-    ready: function ready() {
-        alert("Vue funciona!!");
-    },
+  el: 'body',
 
-    components: { Graph: _Graph2.default }
+  components: { Graph: _Graph2.default }
 });
 
 },{"./components/Graph":4,"vue":3}]},{},[5]);

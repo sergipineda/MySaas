@@ -6,7 +6,7 @@
 
 @section('custom_scripts')
     <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
 
     {{--<script type="text/javascript">--}}
         {{--$(document).ready(function() {--}}
@@ -89,7 +89,9 @@
                     </div>
                     <div class="box-body">
                         <div class="chart">
-                        <graph></graph>
+                        <graph :id="graph1"
+                               :labels="['day1','day2', 'day3']"
+                               :values="[32,29,26,15]"></graph>
 
                             {{--<canvas id="barChartDailySales" style="height: 226px; width: 494px;" width="617" height="282"></canvas>--}}
                         </div>
