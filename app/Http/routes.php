@@ -22,9 +22,12 @@
 App::bind('Flash',
     App\Http\Flash::class);
 Route::group(['middleware' => ['web']], function () {
+    Route::get('downloadInvoice','PDFController@downloadInvoice');
     Route::get('/',['as' => 'welcome', function () {
         return view('welcome');
     }]);
+
+
     Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToAuthenticationServiceProvider');
     Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleAuthenticationServiceProviderCallback');
     Route::get('csstransitions', function(){
