@@ -22,6 +22,18 @@
 App::bind('Flash',
     App\Http\Flash::class);
 Route::group(['middleware' => ['web']], function () {
+
+   Event::listen('user.change', function(){
+       Cache::forget('query.users');
+   });
+
+    Route::get('Users','UsersController@index');
+    Route::post('Users','UsersController@store');
+    Route::put('Users','UsersController@update');
+    Route::delete('Users','UsersController@destroy');
+
+
+
     Route::get('downloadInvoice','PDFController@downloadInvoice');
     Route::get('/',['as' => 'welcome', function () {
         return view('welcome');
