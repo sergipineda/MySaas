@@ -26,6 +26,6 @@ class UserCacheForget
      */
     public function handle(UserHasChanged $event)
     {
-        //
+        Cache::forget('query.users');
     }
 }

@@ -39,7 +39,8 @@ class UsersController extends Controller
 
         User::create(['name'=>'Pepito','email'=>'pepito@pepitos.es']);
         //Cache::forget('query.users');
-        Event::fire('user.change');
+//        Event::fire('user.change');
+        $this->fireUserHasChanged();
     }
     public function update(){
 
@@ -59,5 +60,10 @@ class UsersController extends Controller
         //Cache::forget('query.users');
         Event::fire('user.change');
 
+    }
+
+    private function fireUserHasChanged()
+    {
+        Event::fire('user.change');
     }
 }

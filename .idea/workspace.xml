@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd7f9ae-d464-4f04-9504-17af9ff4b6f2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Events/SomeEvent.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Events/UserHasChanged.php" afterPath="$PROJECT_DIR$/app/Events/UserHasChanged.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Listeners/UserCacheForget.php" afterPath="$PROJECT_DIR$/app/Listeners/UserCacheForget.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
     </list>
     <ignored path="MySass.iws" />
@@ -92,51 +95,19 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8333335">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="27" selection-end-column="8" />
+            <state vertical-scroll-proportion="-8.458333">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plans.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/plans.blade.php">
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="186" column="10" selection-start-line="186" selection-start-column="10" selection-end-line="186" selection-end-column="10" />
+            <state vertical-scroll-proportion="-22.833334">
+              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/auth.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jspdf.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/jspdf.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsPDF.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/components/JsPDF.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="361" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="384" selection-end-column="5" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -171,11 +142,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventServiceProvider.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3288364">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
+            <state vertical-scroll-proportion="-10.625">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCacheForget.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Listeners/UserCacheForget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHasChanged.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Events/UserHasChanged.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.375">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserLogged.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Events/UserLogged.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -249,9 +250,11 @@
         <option value="$PROJECT_DIR$/resources/assets/less/JsPDF.less" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/JsPDF.js" />
         <option value="$PROJECT_DIR$/resources/views/jspdf.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Listeners/UserCacheForget.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Events/UserHasChanged.php" />
       </list>
     </option>
   </component>
@@ -524,6 +527,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Listeners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Events" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -537,7 +558,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HelloPhaser" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="routes&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;UserLogg&#9;null&#9;null&#10;UserL&#9;null&#9;null&#10;EventSe&#9;null&#9;null&#10;users&#9;null&#9;null&#10;route&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;pdf&#9;null&#9;null&#10;PDFContr&#9;null&#9;null&#10;rout&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;scripts&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/resources/views/layouts/partials/scripts.blade.php&#10;dailys&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/resources/views/reports/dailySales.blade.php&#10;main.js&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/node_modules/os-browserify/main.js&#10;authcon&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/Controllers/Auth/AuthController.php&#10;htmlh&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/resources/views/layouts/partials/htmlheader.blade.php&#10;subs&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/Controllers/SubscriptionController.php&#10;servi&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/config/services.php&#10;SubscriptionC&#9;null&#9;null&#10;Plans&#9;null&#9;null&#10;rou&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;services&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/config/services.php&#10;autolo&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/bootstrap/autoload.php&#10;Serv&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/vendor/laravel/socialite/src/SocialiteServiceProvider.php&#10;env&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/.env&#10;AuthCon&#9;null&#9;null&#10;Social&#9;null&#9;null&#10;autoloa&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/bootstrap/autoload.php&#10;ROUTE&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="User&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/Controllers/UsersController.php&#10;routes&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;UserLogg&#9;null&#9;null&#10;UserL&#9;null&#9;null&#10;EventSe&#9;null&#9;null&#10;users&#9;null&#9;null&#10;route&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;pdf&#9;null&#9;null&#10;PDFContr&#9;null&#9;null&#10;rout&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;scripts&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/resources/views/layouts/partials/scripts.blade.php&#10;dailys&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/resources/views/reports/dailySales.blade.php&#10;main.js&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/node_modules/os-browserify/main.js&#10;authcon&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/Controllers/Auth/AuthController.php&#10;htmlh&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/resources/views/layouts/partials/htmlheader.blade.php&#10;subs&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/Controllers/SubscriptionController.php&#10;servi&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/config/services.php&#10;SubscriptionC&#9;null&#9;null&#10;Plans&#9;null&#9;null&#10;rou&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php&#10;services&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/config/services.php&#10;autolo&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/bootstrap/autoload.php&#10;Serv&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/vendor/laravel/socialite/src/SocialiteServiceProvider.php&#10;env&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/.env&#10;AuthCon&#9;null&#9;null&#10;Social&#9;null&#9;null&#10;autoloa&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/bootstrap/autoload.php&#10;ROUTE&#9;FILE&#9;file:///home/sergi/Code/Laravels/MySass/app/Http/routes.php" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/node-v5.6.0-linux-x64/bin/node" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -627,37 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/23ab639b/6aa7e528-cbb4-4bf9-abba-ff0017379c02/sqlite_sequence">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/23ab639b/6aa7e528-cbb4-4bf9-abba-ff0017379c02/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/OAuthIdentity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/23ab639b/6aa7e528-cbb4-4bf9-abba-ff0017379c02/password_resets">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -915,16 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.75">
@@ -991,6 +971,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.458333">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.833334">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/UserHasChanged.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Listeners/UserUpdateLastLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
@@ -1001,18 +1013,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/Listeners/UserCacheForget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8333335">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="27" selection-end-column="8" />
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/app/Events/UserLogged.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3288364">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
