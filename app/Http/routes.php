@@ -23,9 +23,9 @@ App::bind('Flash',
     App\Http\Flash::class);
 Route::group(['middleware' => ['web']], function () {
 
-   Event::listen('user.change', function(){
-       Cache::forget('query.users');
-   });
+//   Event::listen('user.change', function(){
+//       Cache::forget('query.users');
+//   });
 
     Route::get('Users','UsersController@index');
     Route::post('Users','UsersController@store');
