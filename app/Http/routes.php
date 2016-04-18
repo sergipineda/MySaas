@@ -26,6 +26,8 @@ Route::group(['middleware' => ['web']], function () {
 //   Event::listen('user.change', function(){
 //       Cache::forget('query.users');
 //   });
+    Route::get('Profile','ProfileController@show');
+
 
     Route::get('Users','UsersController@index');
     Route::post('Users','UsersController@store');
