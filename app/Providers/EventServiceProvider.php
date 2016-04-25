@@ -20,6 +20,12 @@ class EventServiceProvider extends ServiceProvider
         \App\Events\UserHasChanged::class => [
             \App\Listeners\UserCacheForget::class,
         ],
+//        'App\Events\ShoutoutAdded' => [
+//            'App\Listeners\ShoutoutAddedSendNotification',
+//            'App\Listeners\ShoutoutCreateLog',
+//            'App\Listeners\ShoutoutWarmAdmin',
+//        ],
+
     ];
 
     /**

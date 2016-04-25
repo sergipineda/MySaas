@@ -26,6 +26,8 @@ Route::group(['middleware' => ['web']], function () {
 //   Event::listen('user.change', function(){
 //       Cache::forget('query.users');
 //   });
+
+    Route::get('ShoutOut','ShoutOutController@shoutout');
     Route::get('Profile','ProfileController@show');
 
 

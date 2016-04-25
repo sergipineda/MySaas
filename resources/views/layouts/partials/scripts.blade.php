@@ -8,6 +8,11 @@
 <script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
 
 <script src="{{ asset('/js/main.js') }}" type="text/javascript"></script>
+<script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+
+<script src="{{ asset('/js/NotificateShoutout.js') }}" type="text/javascript"></script>
+
+
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the

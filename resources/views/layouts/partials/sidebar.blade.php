@@ -40,6 +40,7 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ url('reports/dailySales') }}">Informe de ventas</a></li>
                         <li><a href="{{ url('jspdf') }}">PDF</a></li>
+                        <li><a href="{{ url('ShoutOut') }}">Shoutout</a></li>
                     </ul>
                 </li>
             </ul><!-- /.sidebar-menu -->
